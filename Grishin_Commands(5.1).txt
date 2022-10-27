@@ -1,0 +1,18 @@
+1) select c.first_name, c.last_name, a.address, ct.city
+from customer c
+inner join address a
+on c.address_id = a.address_id
+inner join city ct on a.city_id = ct.city_id 
+where a.district = 'California';
+
+
+2) select f.title, a.first_name from film f 
+inner join film_actor fm
+on f.film_id = fm.film_id
+inner join actor a on fm.actor_id = a.actor_id
+where first_name = 'JOHN';
+
+
+
+3) select a.address, b.address from address a join address b on a.city_id = b.city_id where a.address != b.address;
+
