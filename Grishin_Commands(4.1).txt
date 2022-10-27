@@ -1,0 +1,13 @@
+1) use sakila;
+select * from payment where customer_id <> 5 and (amount > 8 or date(payment_date)='2005-08-23'); 
+
+2) use sakila;
+select * from payment where customer_id = 5 and not (amount > 6 or date(payment_date)='2005-06-19'); 
+--108 110 111 112 113 115 116 117 118 119 120 121 123 124 125 126 127 128 129 130 131 132 133 134 135 136 138 139 140 143 144 145
+
+3) use sakila;
+select * from payment where amount in (1.98, 7.98, 9.98);
+
+
+4)  use sakila;
+select * from customer where last_name like '_A%W%' ;
