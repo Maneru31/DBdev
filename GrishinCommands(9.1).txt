@@ -1,0 +1,11 @@
+1) select * from film where film_id in (select film_id from film_category where category_id = (select category_id from category where name = 'Action'));
+
+2) select * from film f inner join film_category fc on f.film_id = fc.film_id inner join category c on c.category_id = fc.category_id where c.name = 'Action';
+
+3) select 'Hollywood Star' level, 30 min_roles, 99999 max_roles
+union all
+select ' Profilic Actor' level, 20 min_roles, 29 max_roles
+union all
+select 'Newcomer' level, 1 min_roles, 19 max_roles
+union all
+select actor_id, count(fa.actor_id), 3 from film_actor fa group by fa.actor_id ; (не работующий)
