@@ -1,8 +1,0 @@
-1) start transaction;
-
-insert into transactions (txn_date, accout_id, txn_type_cd, amount) values (current_date, 123, 'C', 50), (current_date, 789, 'D', 50);
-
-update account set avail_balance -= 50 where account_id = 123;
-update account set avail_balance += 50 where account_id = 789;
-
-commit;

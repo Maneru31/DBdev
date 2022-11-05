@@ -1,6 +1,0 @@
-1) select substring('Please find the substring in this string', 17, 9);
-
-2) select abs(-25.76823) / -25.76823, abs(-25.76823);
-
-
-3) select substring(current_date(), 6, 2); 
